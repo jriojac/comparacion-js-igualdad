@@ -92,7 +92,7 @@ document.getElementById("run").addEventListener("click", () => {
   document.querySelector("#matrix").innerHTML = "";
 
   let numeroUn = 1, stringUn = "1";
-  let numeroTreinta = 30, stringTreinta = "30";
+  let numeroTreinta = 310, stringTreinta = "30";
   let numeroDiez = 10, stringDiez = "10";
 
   comparar(numeroUn, stringUn, "numeroUn", "stringUn");
