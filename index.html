@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Comparación estricta vs laxa en JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Igualdad en JavaScript: <span class="code">==</span> vs <span class="code">===</span></h1>
+      <p class="lead">Demostración interactiva que imprime mensajes correctos evitando conversiones implícitas que confunden a principiantes.</p>
+      <div class="controls">
+        <button id="run">Ejecutar comparaciones</button>
+        <button id="clear" title="Limpia los resultados">Limpiar</button>
+        <span class="muted">Tip: usa siempre <span class="code">===</span> y <span class="code">!==</span> para mayor seguridad.</span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <section class="panel">
+        <h2>Código que se ejecuta</h2>
+        <pre><code>
+// Datos de ejemplo
+let numeroUn = 1;
+let stringUn = '1';
+
+let numeroTreinta = 30;
+let stringTreinta = '30';
+
+let numeroDiez = 10;
+let stringDiez = '10';
+
+// Comparaciones usando función
+comparar(numeroUn, stringUn, "numeroUn", "stringUn");
+comparar(numeroTreinta, stringTreinta, "numeroTreinta", "stringTreinta");
+comparar(numeroDiez, stringDiez, "numeroDiez", "stringDiez");
+        </code></pre>
+        <div class="tip">
+          <strong>Regla práctica:</strong> usa siempre <span class="code">===</span> y <span class="code">!==</span>.
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Resultados</h2>
+        <table id="results">
+          <thead>
+            <tr>
+              <th>Par</th>
+              <th>Comparación</th>
+              <th>Mensaje</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </section>
+
+    <section class="panel">
+      <h3>Detalles de cada comparación</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Expresión</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+            <th>==</th>
+            <th>===</th>
+          </tr>
+        </thead>
+        <tbody id="matrix"></tbody>
+      </table>
+    </section>
+
+    <footer>
+      Hecho para practicar lógica sin caer en trampas de coerción.  
+      Sube este archivo como <span class="code">index.html</span> y habilita GitHub Pages.
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
